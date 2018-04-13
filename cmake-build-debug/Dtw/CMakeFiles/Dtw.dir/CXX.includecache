@@ -1,0 +1,40 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+../inc/ErrorDef.h
+
+../src/inc/Dtw.h
+ErrorDef.h
+../src/inc/ErrorDef.h
+
+../src/inc/Util.h
+cassert
+-
+cstring
+-
+limits
+-
+
+../src/inc/Vector.h
+cassert
+-
+cstring
+-
+limits
+-
+cmath
+-
+
+/Users/lamtharnhantrakul/code/GTCMT/MUSI6106-assignments/ASWE-Assn-5/src/Dtw/Dtw.cpp
+Vector.h
+/Users/lamtharnhantrakul/code/GTCMT/MUSI6106-assignments/ASWE-Assn-5/src/Dtw/Vector.h
+Util.h
+/Users/lamtharnhantrakul/code/GTCMT/MUSI6106-assignments/ASWE-Assn-5/src/Dtw/Util.h
+Dtw.h
+/Users/lamtharnhantrakul/code/GTCMT/MUSI6106-assignments/ASWE-Assn-5/src/Dtw/Dtw.h
+

@@ -1,0 +1,28 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+../inc/ErrorDef.h
+
+../src/inc/Dtw.h
+ErrorDef.h
+../src/inc/ErrorDef.h
+
+/Users/lamtharnhantrakul/code/GTCMT/MUSI6106-assignments/ASWE-Assn-5/src/MUSI6106Exec/MUSI6106Exec.cpp
+ctime
+-
+iostream
+-
+fstream
+-
+MUSI6106Config.h
+/Users/lamtharnhantrakul/code/GTCMT/MUSI6106-assignments/ASWE-Assn-5/src/MUSI6106Exec/MUSI6106Config.h
+Dtw.h
+/Users/lamtharnhantrakul/code/GTCMT/MUSI6106-assignments/ASWE-Assn-5/src/MUSI6106Exec/Dtw.h
+
+inc/MUSI6106Config.h
+
