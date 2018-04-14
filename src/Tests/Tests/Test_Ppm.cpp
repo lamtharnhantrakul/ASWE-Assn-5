@@ -32,13 +32,19 @@ SUITE(Ppm)
             m_ppfInputData = new float*[m_iNumChannels];
             for (int i = 0; i < m_iNumChannels; i++) {
                 m_ppfInputData[i] = new float [m_kiDataLength];
-                CSynthesis::generateSine(m_ppfInputData[i], 800, m_fSampleRate, m_kiDataLength, 1.0f, 0);
+                CSynthesis::generateSine(m_ppfInputData[i], 1000, m_fSampleRate, m_kiDataLength, 0.5f, 0);
             }
 
             m_pfVppmOutputTmp = new float [m_iNumChannels];
             for (int i=0; i < m_iNumChannels; i++) {
                 m_pfVppmOutputTmp[i] = 0.0f;
             }
+
+            m_pfVppmOutput = new float [m_iNumChannels];
+            for (int i=0; i < m_iNumChannels; i++) {
+                m_pfVppmOutput[i] = 0.0f;
+            }
+
 
         }
 
@@ -87,26 +93,34 @@ SUITE(Ppm)
 
     TEST_FIXTURE(PpmData, UnitSine)
     {
-        process();
-
-        // Manually write the expected output value to the Output (Unit Sine should be 1.0 in all channels)
-        for (int i=0; i < m_iNumChannels; i++) {
-            m_pfVppmOutput[i] = 1.0f;
-        }
-
         // Printing out the test signal
         for (int c = 0; c < m_iNumChannels; c++) {
             cout << endl;
             for (int i = 0; i < m_kiDataLength; i++){
                 cout  << m_ppfInputData[c][i] << " ";
             }
+        }
 
+        process();
+
+        cout << endl;
+        for (int c = 0; c < m_iNumChannels; c++) {
+            cout  << pow(10,(m_pfVppmOutputTmp[c]/20)) << " ";
+        }
+
+        // Ground Truth
+        for (int c = 0; c < m_iNumChannels; c++) {
+            m_pfVppmOutput[c] = 0.5f;
+        }
+        cout << endl;
+        for (int c = 0; c < m_iNumChannels; c++) {
+            cout  << m_pfVppmOutput[c] << " ";
         }
 
 
-//        for (int c = 0; c < m_iNumChannels; c++) {
-//                    CHECK_CLOSE(m_pfVppmOutput[c], m_pfVppmOutputTmp[c], 1e-3F);
-//        }
+        for (int c = 0; c < m_iNumChannels; c++) {
+                    CHECK_CLOSE(m_pfVppmOutput[c], pow(10,(m_pfVppmOutputTmp[c]/20)) , 0.1);
+        }
 
     }
 
