@@ -4,5 +4,8 @@
 MUSI6106Exec/CMakeFiles/MUSI6106Exec.dir/MUSI6106Exec.cpp.o
  ../inc/ErrorDef.h
  ../src/inc/Dtw.h
+ ../src/inc/Ppm.h
+ ../src/inc/Synthesis.h
+ ../src/inc/Util.h
  /Users/lamtharnhantrakul/code/GTCMT/MUSI6106-assignments/ASWE-Assn-5/src/MUSI6106Exec/MUSI6106Exec.cpp
  inc/MUSI6106Config.h

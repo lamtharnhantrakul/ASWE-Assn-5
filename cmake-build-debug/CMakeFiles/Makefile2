@@ -201,7 +201,7 @@ AudioFileIO/sndlib/preinstall:
 AudioFileIO/sndlib/CMakeFiles/sndlib.dir/all:
 	$(MAKE) -f AudioFileIO/sndlib/CMakeFiles/sndlib.dir/build.make AudioFileIO/sndlib/CMakeFiles/sndlib.dir/depend
 	$(MAKE) -f AudioFileIO/sndlib/CMakeFiles/sndlib.dir/build.make AudioFileIO/sndlib/CMakeFiles/sndlib.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/lamtharnhantrakul/code/GTCMT/MUSI6106-assignments/ASWE-Assn-5/cmake-build-debug/CMakeFiles --progress-num=18,19,20,21,22,23,24,25,26,27,28 "Built target sndlib"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/lamtharnhantrakul/code/GTCMT/MUSI6106-assignments/ASWE-Assn-5/cmake-build-debug/CMakeFiles --progress-num=50,51,52,53,54,55,56,57,58,59,60 "Built target sndlib"
 .PHONY : AudioFileIO/sndlib/CMakeFiles/sndlib.dir/all
 
 # Include target in all.
@@ -421,7 +421,7 @@ Vibrato/preinstall:
 Vibrato/CMakeFiles/Vibrato.dir/all:
 	$(MAKE) -f Vibrato/CMakeFiles/Vibrato.dir/build.make Vibrato/CMakeFiles/Vibrato.dir/depend
 	$(MAKE) -f Vibrato/CMakeFiles/Vibrato.dir/build.make Vibrato/CMakeFiles/Vibrato.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/lamtharnhantrakul/code/GTCMT/MUSI6106-assignments/ASWE-Assn-5/cmake-build-debug/CMakeFiles --progress-num=16,17 "Built target Vibrato"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/lamtharnhantrakul/code/GTCMT/MUSI6106-assignments/ASWE-Assn-5/cmake-build-debug/CMakeFiles --progress-num=48,49 "Built target Vibrato"
 .PHONY : Vibrato/CMakeFiles/Vibrato.dir/all
 
 # Include target in all.
@@ -510,12 +510,14 @@ clean: Ppm/CMakeFiles/Ppm.dir/clean
 # Directory level rules for directory TestExec
 
 # Convenience name for "all" pass in the directory.
-TestExec/all:
+TestExec/all: TestExec/CMakeFiles/TestExec.dir/all
+TestExec/all: TestExec/CMakeFiles/UnitTest++.dir/all
 
 .PHONY : TestExec/all
 
 # Convenience name for "clean" pass in the directory.
-TestExec/clean:
+TestExec/clean: TestExec/CMakeFiles/TestExec.dir/clean
+TestExec/clean: TestExec/CMakeFiles/UnitTest++.dir/clean
 
 .PHONY : TestExec/clean
 
@@ -523,6 +525,87 @@ TestExec/clean:
 TestExec/preinstall:
 
 .PHONY : TestExec/preinstall
+
+#=============================================================================
+# Target rules for target TestExec/CMakeFiles/TestExec.dir
+
+# All Build rule for target.
+TestExec/CMakeFiles/TestExec.dir/all: AudioFileIO/CMakeFiles/AudioFileIO.dir/all
+TestExec/CMakeFiles/TestExec.dir/all: AudioFileIO/sndlib/CMakeFiles/sndlib.dir/all
+TestExec/CMakeFiles/TestExec.dir/all: CombFilter/CMakeFiles/CombFilter.dir/all
+TestExec/CMakeFiles/TestExec.dir/all: Fft/CMakeFiles/Fft.dir/all
+TestExec/CMakeFiles/TestExec.dir/all: Dtw/CMakeFiles/Dtw.dir/all
+TestExec/CMakeFiles/TestExec.dir/all: Vibrato/CMakeFiles/Vibrato.dir/all
+TestExec/CMakeFiles/TestExec.dir/all: Ppm/CMakeFiles/Ppm.dir/all
+TestExec/CMakeFiles/TestExec.dir/all: TestExec/CMakeFiles/UnitTest++.dir/all
+	$(MAKE) -f TestExec/CMakeFiles/TestExec.dir/build.make TestExec/CMakeFiles/TestExec.dir/depend
+	$(MAKE) -f TestExec/CMakeFiles/TestExec.dir/build.make TestExec/CMakeFiles/TestExec.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/lamtharnhantrakul/code/GTCMT/MUSI6106-assignments/ASWE-Assn-5/cmake-build-debug/CMakeFiles --progress-num=16,17,18,19,20,21,22,23,24 "Built target TestExec"
+.PHONY : TestExec/CMakeFiles/TestExec.dir/all
+
+# Include target in all.
+all: TestExec/CMakeFiles/TestExec.dir/all
+
+.PHONY : all
+
+# Build rule for subdir invocation for target.
+TestExec/CMakeFiles/TestExec.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/lamtharnhantrakul/code/GTCMT/MUSI6106-assignments/ASWE-Assn-5/cmake-build-debug/CMakeFiles 58
+	$(MAKE) -f CMakeFiles/Makefile2 TestExec/CMakeFiles/TestExec.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/lamtharnhantrakul/code/GTCMT/MUSI6106-assignments/ASWE-Assn-5/cmake-build-debug/CMakeFiles 0
+.PHONY : TestExec/CMakeFiles/TestExec.dir/rule
+
+# Convenience name for target.
+TestExec: TestExec/CMakeFiles/TestExec.dir/rule
+
+.PHONY : TestExec
+
+# clean rule for target.
+TestExec/CMakeFiles/TestExec.dir/clean:
+	$(MAKE) -f TestExec/CMakeFiles/TestExec.dir/build.make TestExec/CMakeFiles/TestExec.dir/clean
+.PHONY : TestExec/CMakeFiles/TestExec.dir/clean
+
+# clean rule for target.
+clean: TestExec/CMakeFiles/TestExec.dir/clean
+
+.PHONY : clean
+
+#=============================================================================
+# Target rules for target TestExec/CMakeFiles/UnitTest++.dir
+
+# All Build rule for target.
+TestExec/CMakeFiles/UnitTest++.dir/all:
+	$(MAKE) -f TestExec/CMakeFiles/UnitTest++.dir/build.make TestExec/CMakeFiles/UnitTest++.dir/depend
+	$(MAKE) -f TestExec/CMakeFiles/UnitTest++.dir/build.make TestExec/CMakeFiles/UnitTest++.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/lamtharnhantrakul/code/GTCMT/MUSI6106-assignments/ASWE-Assn-5/cmake-build-debug/CMakeFiles --progress-num=25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47 "Built target UnitTest++"
+.PHONY : TestExec/CMakeFiles/UnitTest++.dir/all
+
+# Include target in all.
+all: TestExec/CMakeFiles/UnitTest++.dir/all
+
+.PHONY : all
+
+# Build rule for subdir invocation for target.
+TestExec/CMakeFiles/UnitTest++.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/lamtharnhantrakul/code/GTCMT/MUSI6106-assignments/ASWE-Assn-5/cmake-build-debug/CMakeFiles 23
+	$(MAKE) -f CMakeFiles/Makefile2 TestExec/CMakeFiles/UnitTest++.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/lamtharnhantrakul/code/GTCMT/MUSI6106-assignments/ASWE-Assn-5/cmake-build-debug/CMakeFiles 0
+.PHONY : TestExec/CMakeFiles/UnitTest++.dir/rule
+
+# Convenience name for target.
+UnitTest++: TestExec/CMakeFiles/UnitTest++.dir/rule
+
+.PHONY : UnitTest++
+
+# clean rule for target.
+TestExec/CMakeFiles/UnitTest++.dir/clean:
+	$(MAKE) -f TestExec/CMakeFiles/UnitTest++.dir/build.make TestExec/CMakeFiles/UnitTest++.dir/clean
+.PHONY : TestExec/CMakeFiles/UnitTest++.dir/clean
+
+# clean rule for target.
+clean: TestExec/CMakeFiles/UnitTest++.dir/clean
+
+.PHONY : clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.

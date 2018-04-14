@@ -12,6 +12,30 @@
 ErrorDef.h
 ../src/inc/ErrorDef.h
 
+../src/inc/Ppm.h
+ErrorDef.h
+../src/inc/ErrorDef.h
+cmath
+-
+
+../src/inc/Synthesis.h
+math.h
+-
+cstdlib
+-
+ErrorDef.h
+../src/inc/ErrorDef.h
+Util.h
+../src/inc/Util.h
+
+../src/inc/Util.h
+cassert
+-
+cstring
+-
+limits
+-
+
 /Users/lamtharnhantrakul/code/GTCMT/MUSI6106-assignments/ASWE-Assn-5/src/MUSI6106Exec/MUSI6106Exec.cpp
 ctime
 -
@@ -23,6 +47,10 @@ MUSI6106Config.h
 /Users/lamtharnhantrakul/code/GTCMT/MUSI6106-assignments/ASWE-Assn-5/src/MUSI6106Exec/MUSI6106Config.h
 Dtw.h
 /Users/lamtharnhantrakul/code/GTCMT/MUSI6106-assignments/ASWE-Assn-5/src/MUSI6106Exec/Dtw.h
+Ppm.h
+/Users/lamtharnhantrakul/code/GTCMT/MUSI6106-assignments/ASWE-Assn-5/src/MUSI6106Exec/Ppm.h
+Synthesis.h
+/Users/lamtharnhantrakul/code/GTCMT/MUSI6106-assignments/ASWE-Assn-5/src/MUSI6106Exec/Synthesis.h
 
 inc/MUSI6106Config.h
 

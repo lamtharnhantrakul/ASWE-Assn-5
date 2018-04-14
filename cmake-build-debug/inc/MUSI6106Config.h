@@ -21,7 +21,7 @@
 //////////////////////////////////////////////////////////
 // set module switches
 #ifndef WITH_TESTS //!< UnitTest++ should be used for for testing
-/* #undef WITH_TESTS */
+#define WITH_TESTS
 #endif // WITH_TESTS
 
 // set the version number

@@ -217,6 +217,9 @@ Ppm_LIB_DEPENDS:STATIC=
 ProcessorCount_cmd_sysctl:FILEPATH=/usr/sbin/sysctl
 
 //Dependencies for target
+UnitTest++_LIB_DEPENDS:STATIC=
+
+//Dependencies for target
 Vibrato_LIB_DEPENDS:STATIC=
 
 //Add target for cppcheck testing

@@ -12,22 +12,22 @@ public:
 
     Error_t initInstance (float fSampleRateInHz, int iNumChannels);
 
-    Error_t process (float **ppfInputBuffer, int iNumberOfFrames);
+    Error_t process (float **ppfInputBuffer, float *pfVppOutputBuffer, int iNumberOfFrames);
 
 protected:
     CPpm ();
     virtual ~CPpm ();
 
 private:
-    float m_fCurrVppm =         0.0f;
-    float m_fAlphaAT =          0.0f;
-    float m_fAlphaRT =          0.0f;
-    float m_fEpsilon =          1.0f * exp(-5.0f); // -100dB
-    float m_fSampleRate =       0.0f;
-    int m_iNumChannels =        0;
+    float m_fCurrVppm;
+    float m_fAlphaAT;
+    float m_fAlphaRT;
+    float m_fEpsilon;
+    float m_fSampleRate;
+    int m_iNumChannels;
 
-    float *m_pfVppMaxOfBlock =         nullptr;
-    float *m_pfPrevVppm =       nullptr;
+    float *m_pfVppMaxOfBlock;
+    float *m_pfPrevVppm;
 };
 
 #endif // #if !defined(__Ppm_hdr__)

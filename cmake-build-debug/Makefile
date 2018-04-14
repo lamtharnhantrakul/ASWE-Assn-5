@@ -225,6 +225,32 @@ Ppm/fast:
 	$(MAKE) -f Ppm/CMakeFiles/Ppm.dir/build.make Ppm/CMakeFiles/Ppm.dir/build
 .PHONY : Ppm/fast
 
+#=============================================================================
+# Target rules for targets named TestExec
+
+# Build rule for target.
+TestExec: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 TestExec
+.PHONY : TestExec
+
+# fast build rule for target.
+TestExec/fast:
+	$(MAKE) -f TestExec/CMakeFiles/TestExec.dir/build.make TestExec/CMakeFiles/TestExec.dir/build
+.PHONY : TestExec/fast
+
+#=============================================================================
+# Target rules for targets named UnitTest++
+
+# Build rule for target.
+UnitTest++: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 UnitTest++
+.PHONY : UnitTest++
+
+# fast build rule for target.
+UnitTest++/fast:
+	$(MAKE) -f TestExec/CMakeFiles/UnitTest++.dir/build.make TestExec/CMakeFiles/UnitTest++.dir/build
+.PHONY : UnitTest++/fast
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -242,6 +268,8 @@ help:
 	@echo "... Dtw"
 	@echo "... Vibrato"
 	@echo "... Ppm"
+	@echo "... TestExec"
+	@echo "... UnitTest++"
 .PHONY : help
 
 

@@ -447,6 +447,110 @@
 					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/lamtharnhantrakul/code/GTCMT/MUSI6106-assignments/ASWE-Assn-5/cmake-build-debug/Ppm/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
+			<Target title="TestExec">
+				<Option output="/Users/lamtharnhantrakul/code/GTCMT/MUSI6106-assignments/ASWE-Assn-5/bin/debug/TestExec" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/lamtharnhantrakul/code/GTCMT/MUSI6106-assignments/ASWE-Assn-5/bin"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/Users/lamtharnhantrakul/code/GTCMT/MUSI6106-assignments/ASWE-Assn-5/inc"/>
+					<Add directory="/Users/lamtharnhantrakul/code/GTCMT/MUSI6106-assignments/ASWE-Assn-5/src/inc"/>
+					<Add directory="/Users/lamtharnhantrakul/code/GTCMT/MUSI6106-assignments/ASWE-Assn-5/cmake-build-debug/inc"/>
+					<Add directory="/Users/lamtharnhantrakul/code/GTCMT/MUSI6106-assignments/ASWE-Assn-5/3rdparty/unittest-cpp-master/UnitTest++"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/9.0.0/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
+					<Add directory="/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/Users/lamtharnhantrakul/code/GTCMT/MUSI6106-assignments/ASWE-Assn-5/cmake-build-debug/TestExec/Makefile&quot;  VERBOSE=1 TestExec"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/lamtharnhantrakul/code/GTCMT/MUSI6106-assignments/ASWE-Assn-5/cmake-build-debug/TestExec/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/Users/lamtharnhantrakul/code/GTCMT/MUSI6106-assignments/ASWE-Assn-5/cmake-build-debug/TestExec/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/lamtharnhantrakul/code/GTCMT/MUSI6106-assignments/ASWE-Assn-5/cmake-build-debug/TestExec/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="TestExec/fast">
+				<Option output="/Users/lamtharnhantrakul/code/GTCMT/MUSI6106-assignments/ASWE-Assn-5/bin/debug/TestExec" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/lamtharnhantrakul/code/GTCMT/MUSI6106-assignments/ASWE-Assn-5/bin"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/Users/lamtharnhantrakul/code/GTCMT/MUSI6106-assignments/ASWE-Assn-5/inc"/>
+					<Add directory="/Users/lamtharnhantrakul/code/GTCMT/MUSI6106-assignments/ASWE-Assn-5/src/inc"/>
+					<Add directory="/Users/lamtharnhantrakul/code/GTCMT/MUSI6106-assignments/ASWE-Assn-5/cmake-build-debug/inc"/>
+					<Add directory="/Users/lamtharnhantrakul/code/GTCMT/MUSI6106-assignments/ASWE-Assn-5/3rdparty/unittest-cpp-master/UnitTest++"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/9.0.0/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
+					<Add directory="/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/Users/lamtharnhantrakul/code/GTCMT/MUSI6106-assignments/ASWE-Assn-5/cmake-build-debug/TestExec/Makefile&quot;  VERBOSE=1 TestExec/fast"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/lamtharnhantrakul/code/GTCMT/MUSI6106-assignments/ASWE-Assn-5/cmake-build-debug/TestExec/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/Users/lamtharnhantrakul/code/GTCMT/MUSI6106-assignments/ASWE-Assn-5/cmake-build-debug/TestExec/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/lamtharnhantrakul/code/GTCMT/MUSI6106-assignments/ASWE-Assn-5/cmake-build-debug/TestExec/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="UnitTest++">
+				<Option output="/Users/lamtharnhantrakul/code/GTCMT/MUSI6106-assignments/ASWE-Assn-5/lib/debug/libUnitTest++.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/lamtharnhantrakul/code/GTCMT/MUSI6106-assignments/ASWE-Assn-5/cmake-build-debug/TestExec"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/Users/lamtharnhantrakul/code/GTCMT/MUSI6106-assignments/ASWE-Assn-5/inc"/>
+					<Add directory="/Users/lamtharnhantrakul/code/GTCMT/MUSI6106-assignments/ASWE-Assn-5/src/inc"/>
+					<Add directory="/Users/lamtharnhantrakul/code/GTCMT/MUSI6106-assignments/ASWE-Assn-5/cmake-build-debug/inc"/>
+					<Add directory="/Users/lamtharnhantrakul/code/GTCMT/MUSI6106-assignments/ASWE-Assn-5/3rdparty/unittest-cpp-master/UnitTest++"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/9.0.0/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
+					<Add directory="/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/Users/lamtharnhantrakul/code/GTCMT/MUSI6106-assignments/ASWE-Assn-5/cmake-build-debug/TestExec/Makefile&quot;  VERBOSE=1 UnitTest++"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/lamtharnhantrakul/code/GTCMT/MUSI6106-assignments/ASWE-Assn-5/cmake-build-debug/TestExec/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/Users/lamtharnhantrakul/code/GTCMT/MUSI6106-assignments/ASWE-Assn-5/cmake-build-debug/TestExec/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/lamtharnhantrakul/code/GTCMT/MUSI6106-assignments/ASWE-Assn-5/cmake-build-debug/TestExec/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="UnitTest++/fast">
+				<Option output="/Users/lamtharnhantrakul/code/GTCMT/MUSI6106-assignments/ASWE-Assn-5/lib/debug/libUnitTest++.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/lamtharnhantrakul/code/GTCMT/MUSI6106-assignments/ASWE-Assn-5/cmake-build-debug/TestExec"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/Users/lamtharnhantrakul/code/GTCMT/MUSI6106-assignments/ASWE-Assn-5/inc"/>
+					<Add directory="/Users/lamtharnhantrakul/code/GTCMT/MUSI6106-assignments/ASWE-Assn-5/src/inc"/>
+					<Add directory="/Users/lamtharnhantrakul/code/GTCMT/MUSI6106-assignments/ASWE-Assn-5/cmake-build-debug/inc"/>
+					<Add directory="/Users/lamtharnhantrakul/code/GTCMT/MUSI6106-assignments/ASWE-Assn-5/3rdparty/unittest-cpp-master/UnitTest++"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/9.0.0/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
+					<Add directory="/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/Users/lamtharnhantrakul/code/GTCMT/MUSI6106-assignments/ASWE-Assn-5/cmake-build-debug/TestExec/Makefile&quot;  VERBOSE=1 UnitTest++/fast"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/lamtharnhantrakul/code/GTCMT/MUSI6106-assignments/ASWE-Assn-5/cmake-build-debug/TestExec/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/Users/lamtharnhantrakul/code/GTCMT/MUSI6106-assignments/ASWE-Assn-5/cmake-build-debug/TestExec/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/lamtharnhantrakul/code/GTCMT/MUSI6106-assignments/ASWE-Assn-5/cmake-build-debug/TestExec/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
 		</Build>
 		<Unit filename="/Users/lamtharnhantrakul/code/GTCMT/MUSI6106-assignments/ASWE-Assn-5/3rdParty/Fft/rvfft.cpp">
 			<Option target="Fft"/>
@@ -523,6 +627,174 @@
 		<Unit filename="/Users/lamtharnhantrakul/code/GTCMT/MUSI6106-assignments/ASWE-Assn-5/3rdparty/sndlib/xen.h">
 			<Option target="sndlib"/>
 		</Unit>
+		<Unit filename="/Users/lamtharnhantrakul/code/GTCMT/MUSI6106-assignments/ASWE-Assn-5/3rdparty/unittest-cpp-master/UnitTest++/AssertException.cpp">
+			<Option target="UnitTest++"/>
+		</Unit>
+		<Unit filename="/Users/lamtharnhantrakul/code/GTCMT/MUSI6106-assignments/ASWE-Assn-5/3rdparty/unittest-cpp-master/UnitTest++/AssertException.h">
+			<Option target="UnitTest++"/>
+		</Unit>
+		<Unit filename="/Users/lamtharnhantrakul/code/GTCMT/MUSI6106-assignments/ASWE-Assn-5/3rdparty/unittest-cpp-master/UnitTest++/CheckMacros.h">
+			<Option target="UnitTest++"/>
+		</Unit>
+		<Unit filename="/Users/lamtharnhantrakul/code/GTCMT/MUSI6106-assignments/ASWE-Assn-5/3rdparty/unittest-cpp-master/UnitTest++/Checks.cpp">
+			<Option target="UnitTest++"/>
+		</Unit>
+		<Unit filename="/Users/lamtharnhantrakul/code/GTCMT/MUSI6106-assignments/ASWE-Assn-5/3rdparty/unittest-cpp-master/UnitTest++/Checks.h">
+			<Option target="UnitTest++"/>
+		</Unit>
+		<Unit filename="/Users/lamtharnhantrakul/code/GTCMT/MUSI6106-assignments/ASWE-Assn-5/3rdparty/unittest-cpp-master/UnitTest++/CompositeTestReporter.cpp">
+			<Option target="UnitTest++"/>
+		</Unit>
+		<Unit filename="/Users/lamtharnhantrakul/code/GTCMT/MUSI6106-assignments/ASWE-Assn-5/3rdparty/unittest-cpp-master/UnitTest++/CompositeTestReporter.h">
+			<Option target="UnitTest++"/>
+		</Unit>
+		<Unit filename="/Users/lamtharnhantrakul/code/GTCMT/MUSI6106-assignments/ASWE-Assn-5/3rdparty/unittest-cpp-master/UnitTest++/Config.h">
+			<Option target="UnitTest++"/>
+		</Unit>
+		<Unit filename="/Users/lamtharnhantrakul/code/GTCMT/MUSI6106-assignments/ASWE-Assn-5/3rdparty/unittest-cpp-master/UnitTest++/CurrentTest.cpp">
+			<Option target="UnitTest++"/>
+		</Unit>
+		<Unit filename="/Users/lamtharnhantrakul/code/GTCMT/MUSI6106-assignments/ASWE-Assn-5/3rdparty/unittest-cpp-master/UnitTest++/CurrentTest.h">
+			<Option target="UnitTest++"/>
+		</Unit>
+		<Unit filename="/Users/lamtharnhantrakul/code/GTCMT/MUSI6106-assignments/ASWE-Assn-5/3rdparty/unittest-cpp-master/UnitTest++/DeferredTestReporter.cpp">
+			<Option target="UnitTest++"/>
+		</Unit>
+		<Unit filename="/Users/lamtharnhantrakul/code/GTCMT/MUSI6106-assignments/ASWE-Assn-5/3rdparty/unittest-cpp-master/UnitTest++/DeferredTestReporter.h">
+			<Option target="UnitTest++"/>
+		</Unit>
+		<Unit filename="/Users/lamtharnhantrakul/code/GTCMT/MUSI6106-assignments/ASWE-Assn-5/3rdparty/unittest-cpp-master/UnitTest++/DeferredTestResult.cpp">
+			<Option target="UnitTest++"/>
+		</Unit>
+		<Unit filename="/Users/lamtharnhantrakul/code/GTCMT/MUSI6106-assignments/ASWE-Assn-5/3rdparty/unittest-cpp-master/UnitTest++/DeferredTestResult.h">
+			<Option target="UnitTest++"/>
+		</Unit>
+		<Unit filename="/Users/lamtharnhantrakul/code/GTCMT/MUSI6106-assignments/ASWE-Assn-5/3rdparty/unittest-cpp-master/UnitTest++/ExceptionMacros.h">
+			<Option target="UnitTest++"/>
+		</Unit>
+		<Unit filename="/Users/lamtharnhantrakul/code/GTCMT/MUSI6106-assignments/ASWE-Assn-5/3rdparty/unittest-cpp-master/UnitTest++/ExecuteTest.h">
+			<Option target="UnitTest++"/>
+		</Unit>
+		<Unit filename="/Users/lamtharnhantrakul/code/GTCMT/MUSI6106-assignments/ASWE-Assn-5/3rdparty/unittest-cpp-master/UnitTest++/HelperMacros.h">
+			<Option target="UnitTest++"/>
+		</Unit>
+		<Unit filename="/Users/lamtharnhantrakul/code/GTCMT/MUSI6106-assignments/ASWE-Assn-5/3rdparty/unittest-cpp-master/UnitTest++/MemoryOutStream.cpp">
+			<Option target="UnitTest++"/>
+		</Unit>
+		<Unit filename="/Users/lamtharnhantrakul/code/GTCMT/MUSI6106-assignments/ASWE-Assn-5/3rdparty/unittest-cpp-master/UnitTest++/MemoryOutStream.h">
+			<Option target="UnitTest++"/>
+		</Unit>
+		<Unit filename="/Users/lamtharnhantrakul/code/GTCMT/MUSI6106-assignments/ASWE-Assn-5/3rdparty/unittest-cpp-master/UnitTest++/Posix/SignalTranslator.cpp">
+			<Option target="UnitTest++"/>
+		</Unit>
+		<Unit filename="/Users/lamtharnhantrakul/code/GTCMT/MUSI6106-assignments/ASWE-Assn-5/3rdparty/unittest-cpp-master/UnitTest++/Posix/SignalTranslator.h">
+			<Option target="UnitTest++"/>
+		</Unit>
+		<Unit filename="/Users/lamtharnhantrakul/code/GTCMT/MUSI6106-assignments/ASWE-Assn-5/3rdparty/unittest-cpp-master/UnitTest++/Posix/TimeHelpers.cpp">
+			<Option target="UnitTest++"/>
+		</Unit>
+		<Unit filename="/Users/lamtharnhantrakul/code/GTCMT/MUSI6106-assignments/ASWE-Assn-5/3rdparty/unittest-cpp-master/UnitTest++/Posix/TimeHelpers.h">
+			<Option target="UnitTest++"/>
+		</Unit>
+		<Unit filename="/Users/lamtharnhantrakul/code/GTCMT/MUSI6106-assignments/ASWE-Assn-5/3rdparty/unittest-cpp-master/UnitTest++/ReportAssert.cpp">
+			<Option target="UnitTest++"/>
+		</Unit>
+		<Unit filename="/Users/lamtharnhantrakul/code/GTCMT/MUSI6106-assignments/ASWE-Assn-5/3rdparty/unittest-cpp-master/UnitTest++/ReportAssert.h">
+			<Option target="UnitTest++"/>
+		</Unit>
+		<Unit filename="/Users/lamtharnhantrakul/code/GTCMT/MUSI6106-assignments/ASWE-Assn-5/3rdparty/unittest-cpp-master/UnitTest++/ReportAssertImpl.h">
+			<Option target="UnitTest++"/>
+		</Unit>
+		<Unit filename="/Users/lamtharnhantrakul/code/GTCMT/MUSI6106-assignments/ASWE-Assn-5/3rdparty/unittest-cpp-master/UnitTest++/RequireMacros.h">
+			<Option target="UnitTest++"/>
+		</Unit>
+		<Unit filename="/Users/lamtharnhantrakul/code/GTCMT/MUSI6106-assignments/ASWE-Assn-5/3rdparty/unittest-cpp-master/UnitTest++/RequiredCheckException.cpp">
+			<Option target="UnitTest++"/>
+		</Unit>
+		<Unit filename="/Users/lamtharnhantrakul/code/GTCMT/MUSI6106-assignments/ASWE-Assn-5/3rdparty/unittest-cpp-master/UnitTest++/RequiredCheckException.h">
+			<Option target="UnitTest++"/>
+		</Unit>
+		<Unit filename="/Users/lamtharnhantrakul/code/GTCMT/MUSI6106-assignments/ASWE-Assn-5/3rdparty/unittest-cpp-master/UnitTest++/RequiredCheckTestReporter.cpp">
+			<Option target="UnitTest++"/>
+		</Unit>
+		<Unit filename="/Users/lamtharnhantrakul/code/GTCMT/MUSI6106-assignments/ASWE-Assn-5/3rdparty/unittest-cpp-master/UnitTest++/RequiredCheckTestReporter.h">
+			<Option target="UnitTest++"/>
+		</Unit>
+		<Unit filename="/Users/lamtharnhantrakul/code/GTCMT/MUSI6106-assignments/ASWE-Assn-5/3rdparty/unittest-cpp-master/UnitTest++/Test.cpp">
+			<Option target="UnitTest++"/>
+		</Unit>
+		<Unit filename="/Users/lamtharnhantrakul/code/GTCMT/MUSI6106-assignments/ASWE-Assn-5/3rdparty/unittest-cpp-master/UnitTest++/Test.h">
+			<Option target="UnitTest++"/>
+		</Unit>
+		<Unit filename="/Users/lamtharnhantrakul/code/GTCMT/MUSI6106-assignments/ASWE-Assn-5/3rdparty/unittest-cpp-master/UnitTest++/TestDetails.cpp">
+			<Option target="UnitTest++"/>
+		</Unit>
+		<Unit filename="/Users/lamtharnhantrakul/code/GTCMT/MUSI6106-assignments/ASWE-Assn-5/3rdparty/unittest-cpp-master/UnitTest++/TestDetails.h">
+			<Option target="UnitTest++"/>
+		</Unit>
+		<Unit filename="/Users/lamtharnhantrakul/code/GTCMT/MUSI6106-assignments/ASWE-Assn-5/3rdparty/unittest-cpp-master/UnitTest++/TestList.cpp">
+			<Option target="UnitTest++"/>
+		</Unit>
+		<Unit filename="/Users/lamtharnhantrakul/code/GTCMT/MUSI6106-assignments/ASWE-Assn-5/3rdparty/unittest-cpp-master/UnitTest++/TestList.h">
+			<Option target="UnitTest++"/>
+		</Unit>
+		<Unit filename="/Users/lamtharnhantrakul/code/GTCMT/MUSI6106-assignments/ASWE-Assn-5/3rdparty/unittest-cpp-master/UnitTest++/TestMacros.h">
+			<Option target="UnitTest++"/>
+		</Unit>
+		<Unit filename="/Users/lamtharnhantrakul/code/GTCMT/MUSI6106-assignments/ASWE-Assn-5/3rdparty/unittest-cpp-master/UnitTest++/TestReporter.cpp">
+			<Option target="UnitTest++"/>
+		</Unit>
+		<Unit filename="/Users/lamtharnhantrakul/code/GTCMT/MUSI6106-assignments/ASWE-Assn-5/3rdparty/unittest-cpp-master/UnitTest++/TestReporter.h">
+			<Option target="UnitTest++"/>
+		</Unit>
+		<Unit filename="/Users/lamtharnhantrakul/code/GTCMT/MUSI6106-assignments/ASWE-Assn-5/3rdparty/unittest-cpp-master/UnitTest++/TestReporterStdout.cpp">
+			<Option target="UnitTest++"/>
+		</Unit>
+		<Unit filename="/Users/lamtharnhantrakul/code/GTCMT/MUSI6106-assignments/ASWE-Assn-5/3rdparty/unittest-cpp-master/UnitTest++/TestReporterStdout.h">
+			<Option target="UnitTest++"/>
+		</Unit>
+		<Unit filename="/Users/lamtharnhantrakul/code/GTCMT/MUSI6106-assignments/ASWE-Assn-5/3rdparty/unittest-cpp-master/UnitTest++/TestResults.cpp">
+			<Option target="UnitTest++"/>
+		</Unit>
+		<Unit filename="/Users/lamtharnhantrakul/code/GTCMT/MUSI6106-assignments/ASWE-Assn-5/3rdparty/unittest-cpp-master/UnitTest++/TestResults.h">
+			<Option target="UnitTest++"/>
+		</Unit>
+		<Unit filename="/Users/lamtharnhantrakul/code/GTCMT/MUSI6106-assignments/ASWE-Assn-5/3rdparty/unittest-cpp-master/UnitTest++/TestRunner.cpp">
+			<Option target="UnitTest++"/>
+		</Unit>
+		<Unit filename="/Users/lamtharnhantrakul/code/GTCMT/MUSI6106-assignments/ASWE-Assn-5/3rdparty/unittest-cpp-master/UnitTest++/TestRunner.h">
+			<Option target="UnitTest++"/>
+		</Unit>
+		<Unit filename="/Users/lamtharnhantrakul/code/GTCMT/MUSI6106-assignments/ASWE-Assn-5/3rdparty/unittest-cpp-master/UnitTest++/TestSuite.h">
+			<Option target="UnitTest++"/>
+		</Unit>
+		<Unit filename="/Users/lamtharnhantrakul/code/GTCMT/MUSI6106-assignments/ASWE-Assn-5/3rdparty/unittest-cpp-master/UnitTest++/ThrowingTestReporter.cpp">
+			<Option target="UnitTest++"/>
+		</Unit>
+		<Unit filename="/Users/lamtharnhantrakul/code/GTCMT/MUSI6106-assignments/ASWE-Assn-5/3rdparty/unittest-cpp-master/UnitTest++/ThrowingTestReporter.h">
+			<Option target="UnitTest++"/>
+		</Unit>
+		<Unit filename="/Users/lamtharnhantrakul/code/GTCMT/MUSI6106-assignments/ASWE-Assn-5/3rdparty/unittest-cpp-master/UnitTest++/TimeConstraint.cpp">
+			<Option target="UnitTest++"/>
+		</Unit>
+		<Unit filename="/Users/lamtharnhantrakul/code/GTCMT/MUSI6106-assignments/ASWE-Assn-5/3rdparty/unittest-cpp-master/UnitTest++/TimeConstraint.h">
+			<Option target="UnitTest++"/>
+		</Unit>
+		<Unit filename="/Users/lamtharnhantrakul/code/GTCMT/MUSI6106-assignments/ASWE-Assn-5/3rdparty/unittest-cpp-master/UnitTest++/TimeHelpers.h">
+			<Option target="UnitTest++"/>
+		</Unit>
+		<Unit filename="/Users/lamtharnhantrakul/code/GTCMT/MUSI6106-assignments/ASWE-Assn-5/3rdparty/unittest-cpp-master/UnitTest++/UnitTest++.h">
+			<Option target="UnitTest++"/>
+		</Unit>
+		<Unit filename="/Users/lamtharnhantrakul/code/GTCMT/MUSI6106-assignments/ASWE-Assn-5/3rdparty/unittest-cpp-master/UnitTest++/UnitTestPP.h">
+			<Option target="UnitTest++"/>
+		</Unit>
+		<Unit filename="/Users/lamtharnhantrakul/code/GTCMT/MUSI6106-assignments/ASWE-Assn-5/3rdparty/unittest-cpp-master/UnitTest++/XmlTestReporter.cpp">
+			<Option target="UnitTest++"/>
+		</Unit>
+		<Unit filename="/Users/lamtharnhantrakul/code/GTCMT/MUSI6106-assignments/ASWE-Assn-5/3rdparty/unittest-cpp-master/UnitTest++/XmlTestReporter.h">
+			<Option target="UnitTest++"/>
+		</Unit>
 		<Unit filename="/Users/lamtharnhantrakul/code/GTCMT/MUSI6106-assignments/ASWE-Assn-5/src/AudioFileIO/AudioFile.cpp">
 			<Option target="AudioFileIO"/>
 		</Unit>
@@ -567,6 +839,30 @@
 		</Unit>
 		<Unit filename="/Users/lamtharnhantrakul/code/GTCMT/MUSI6106-assignments/ASWE-Assn-5/src/Ppm/Ppm.cpp">
 			<Option target="Ppm"/>
+		</Unit>
+		<Unit filename="/Users/lamtharnhantrakul/code/GTCMT/MUSI6106-assignments/ASWE-Assn-5/src/Tests/TestExec/Test.cpp">
+			<Option target="TestExec"/>
+		</Unit>
+		<Unit filename="/Users/lamtharnhantrakul/code/GTCMT/MUSI6106-assignments/ASWE-Assn-5/src/Tests/Tests/Test_AudioIO.cpp">
+			<Option target="TestExec"/>
+		</Unit>
+		<Unit filename="/Users/lamtharnhantrakul/code/GTCMT/MUSI6106-assignments/ASWE-Assn-5/src/Tests/Tests/Test_CombFilter.cpp">
+			<Option target="TestExec"/>
+		</Unit>
+		<Unit filename="/Users/lamtharnhantrakul/code/GTCMT/MUSI6106-assignments/ASWE-Assn-5/src/Tests/Tests/Test_Dtw.cpp">
+			<Option target="TestExec"/>
+		</Unit>
+		<Unit filename="/Users/lamtharnhantrakul/code/GTCMT/MUSI6106-assignments/ASWE-Assn-5/src/Tests/Tests/Test_Fft.cpp">
+			<Option target="TestExec"/>
+		</Unit>
+		<Unit filename="/Users/lamtharnhantrakul/code/GTCMT/MUSI6106-assignments/ASWE-Assn-5/src/Tests/Tests/Test_Ppm.cpp">
+			<Option target="TestExec"/>
+		</Unit>
+		<Unit filename="/Users/lamtharnhantrakul/code/GTCMT/MUSI6106-assignments/ASWE-Assn-5/src/Tests/Tests/Test_RingBuffer.cpp">
+			<Option target="TestExec"/>
+		</Unit>
+		<Unit filename="/Users/lamtharnhantrakul/code/GTCMT/MUSI6106-assignments/ASWE-Assn-5/src/Tests/Tests/Test_Vibrato.cpp">
+			<Option target="TestExec"/>
 		</Unit>
 		<Unit filename="/Users/lamtharnhantrakul/code/GTCMT/MUSI6106-assignments/ASWE-Assn-5/src/Vibrato/CMakeLists.txt">
 			<Option target="Vibrato"/>

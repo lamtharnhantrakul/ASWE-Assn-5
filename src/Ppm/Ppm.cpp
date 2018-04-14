@@ -48,20 +48,26 @@ Error_t CPpm::initInstance (float fSampleRateInHz, int iNumChannels)
 
 CPpm::CPpm()
 {
-
+    m_fCurrVppm =         0.0f;
+    m_fAlphaAT =          0.0f;
+    m_fAlphaRT =          0.0f;
+    m_fEpsilon =          1.0f * exp(-5.0f); // -100dB
+    m_fSampleRate =       0.0f;
+    m_iNumChannels =        0;
 }
 
 CPpm::~CPpm()
 {
-
+    delete [] m_pfVppMaxOfBlock;
+    delete [] m_pfPrevVppm;
 }
 
-Error_t CPpm::process(float **ppfInputBuffer, int iNumberOfFrames)
+Error_t CPpm::process(float **ppfInputBuffer, float *pfVppOutputBuffer, int iNumberOfFrames)
 {
     // reset the vector holding the max vppm per channel
-    for (int i=0; i < m_iNumChannels; i++)
+    for (int c=0; c < m_iNumChannels; c++)
     {
-        m_pfVppMaxOfBlock[i] = -INFINITY;
+        m_pfVppMaxOfBlock[c] = -INFINITY;
     }
 
     for (int c = 0; c < m_iNumChannels; c++)
@@ -84,7 +90,23 @@ Error_t CPpm::process(float **ppfInputBuffer, int iNumberOfFrames)
             }
         }
     }
-    // For this block,
+    // `m_pfVppMaxOfBlock` now contains the max Vpp of each channel
+    for (int c=0; c < m_iNumChannels; c++)
+    {
+        if (m_pfVppMaxOfBlock[c] < m_fEpsilon)
+        {
+            // Ensure there are no peak values smaller than epsilon
+            m_pfVppMaxOfBlock[c] = m_fEpsilon;
+        }
+        // Convert to dB
+        m_pfVppMaxOfBlock[c] = 20*log10(m_pfVppMaxOfBlock[c]);
+    }
+
+    // Now copy values in  `m_pfVppMaxOfBlock` into the output buffer
+    for (int c=0; c < m_iNumChannels; c++)
+    {
+        pfVppOutputBuffer[c] = m_pfVppMaxOfBlock[c];
+    }
 
     return kNoError;
 }
