@@ -1,5 +1,12 @@
 #include "ErrorDef.h"
 #include "Ppm.h"
+#include <cassert>
+#include <ctime>
+#include <iostream>
+#include <fstream>
+
+using std::cout;
+using std::endl;
 
 
 Error_t CPpm::createInstance(CPpm *&pCPpm)
@@ -28,22 +35,26 @@ Error_t CPpm::initInstance (float fSampleRateInHz, int iNumChannels)
     m_fSampleRate = fSampleRateInHz;
     m_iNumChannels = iNumChannels;
 
-    // MATLAB
-    // alpha = 1 - [exp(-2.2 / (f_s * 0.01)), exp(-2.2 / (f_s * 1.5))];
-    m_fAlphaAT = 1.0f - exp(-2.2f / (m_fSampleRate * 0.01f));
+    // Init the attack and release alpha
+    m_fAlphaAT = 1.0f - exp(-2.2f / (m_fSampleRate * 0.01f));  // alpha = 1 - [exp(-2.2 / (f_s * 0.01)), exp(-2.2 / (f_s * 1.5))];
     m_fAlphaRT = 1.0f - exp(-2.2f / (m_fSampleRate * 1.5f));
 
-    // Init an array to store the computed VPPM per channel
+    // Init the epsilon value
+    m_fEpsilon = 1.0f * pow(10.0f,-5.0f); // if signal is 0 we should get -100dB
+
+    // Init an array to store the computed VPPM per channel per block
     m_pfVppMaxOfBlock = new float[m_iNumChannels];
     for (int i=0; i < m_iNumChannels; i++) {
         m_pfVppMaxOfBlock[i] = -INFINITY;
     }
 
-    // Init an array to store the computed VPPM per channel
+    // Init an array to store the prev VPPM per channel per block
     m_pfPrevVppm = new float[m_iNumChannels];
     for (int i=0; i < m_iNumChannels; i++) {
         m_pfPrevVppm[i] = 0.0f;
     }
+
+    return kNoError;
 }
 
 CPpm::CPpm()
@@ -51,7 +62,7 @@ CPpm::CPpm()
     m_fCurrVppm =         0.0f;
     m_fAlphaAT =          0.0f;
     m_fAlphaRT =          0.0f;
-    m_fEpsilon =          1.0f * exp(-5.0f); // -100dB
+    m_fEpsilon =          0.0f;
     m_fSampleRate =       0.0f;
     m_iNumChannels =        0;
 }
@@ -80,7 +91,7 @@ Error_t CPpm::process(float **ppfInputBuffer, float *pfVppOutputBuffer, int iNum
             }
             else {
                 // attack state
-                m_fCurrVppm = m_fAlphaAT * abs(ppfInputBuffer[c][i]) + (1-m_fAlphaAT) * m_pfPrevVppm[c]; // MATLAB ==>  ppmout(i) = alpha_AT * x(i) + (1-alpha_AT) * filterbuf;
+                m_fCurrVppm = (m_fAlphaAT * abs(ppfInputBuffer[c][i])) + ((1-m_fAlphaAT) * m_pfPrevVppm[c]); // MATLAB ==>  ppmout(i) = alpha_AT * x(i) + (1-alpha_AT) * filterbuf;
             }
             m_pfPrevVppm[c] = m_fCurrVppm; // MATLAB ==>  filterbuf = ppmout(i);
 
@@ -95,9 +106,10 @@ Error_t CPpm::process(float **ppfInputBuffer, float *pfVppOutputBuffer, int iNum
     {
         if (m_pfVppMaxOfBlock[c] < m_fEpsilon)
         {
-            // Ensure there are no peak values smaller than epsilon
+            // Ensure there are no peak values smaller than epsilon, otherwise log(0) returns an error
             m_pfVppMaxOfBlock[c] = m_fEpsilon;
         }
+
         // Convert to dB
         m_pfVppMaxOfBlock[c] = 20*log10(m_pfVppMaxOfBlock[c]);
     }

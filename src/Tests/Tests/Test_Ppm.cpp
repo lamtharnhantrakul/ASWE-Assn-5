@@ -143,61 +143,99 @@ SUITE(Ppm)
 
     };
 
-    TEST_FIXTURE(PpmData, UnitSine)
+//    TEST_FIXTURE(PpmData, UnitSine)
+//    {
+//        // Printing out the test signal
+//        //printSignal(m_ppfInputData, m_iNumChannels, m_kiDataLength);
+//
+//        process();
+//        printLogToAbsSignal(m_ppfVppmOutputBlocks, m_iNumChannels, m_iNumBlocks);
+//
+//        cout << endl;
+//        for (int c = 0; c < m_iNumChannels; c++) {
+//            cout  << convertLogToAbsAmp(m_pfVppmOutputTmp[c]) << " ";
+//        }
+//
+//        // Ground Truth
+//        for (int c = 0; c < m_iNumChannels; c++) {
+//            m_pfVppmOutput[c] = m_fTestSineAmp;
+//        }
+//        cout << endl;
+//        for (int c = 0; c < m_iNumChannels; c++) {
+//            cout  << m_pfVppmOutput[c] << " ";
+//        }
+//
+//
+//        for (int c = 0; c < m_iNumChannels; c++) {
+//                    CHECK_CLOSE(m_pfVppmOutput[c], convertLogToAbsAmp(m_pfVppmOutputTmp[c]) , 0.1);
+//        }
+//
+//    }
+//
+//    TEST_FIXTURE(PpmData, UnitSineHalfwayZero)
+//    {
+//        //Generate Sine
+//        m_ppfInputData = new float*[m_iNumChannels];
+//        for (int c = 0; c < m_iNumChannels; c++) {
+//            m_ppfInputData[c] = new float [m_kiDataLength];
+//            CSynthesis::generateSine(m_ppfInputData[c], 1000, m_fSampleRate, m_kiDataLength, m_fTestSineAmp, 0);
+//        }
+//        // Zero out the second half of the signal
+//        int iHalfwaySampleIdx = floor(m_kiDataLength/2.0f);
+//        for (int c = 0; c < m_iNumChannels; c++) {
+//            for (int j = iHalfwaySampleIdx; j < m_kiDataLength; j++) {
+//                m_ppfInputData[c][j] = 0.0f;
+//            }
+//        }
+//
+//        //printSignal(m_ppfInputData, m_iNumChannels, m_kiDataLength);
+//
+//        process();
+//        printLogToAbsSignal(m_ppfVppmOutputBlocks, m_iNumChannels, m_iNumBlocks);
+//
+//        int iHalfwayBlockIdx = ceil(iHalfwaySampleIdx/m_iBlockLength);
+//        cout << endl;
+//        cout << convertLogToAbsAmp(m_ppfVppmOutputBlocks[0][iHalfwayBlockIdx]) << endl;
+//        cout << convertLogToAbsAmp(m_ppfVppmOutputBlocks[0][iHalfwayBlockIdx+1]) << endl;
+//        cout << convertLogToAbsAmp(m_ppfVppmOutputBlocks[0][iHalfwayBlockIdx+1]) - convertLogToAbsAmp(m_ppfVppmOutputBlocks[0][iHalfwayBlockIdx]) << endl;
+//    }
+//
+//    TEST_FIXTURE(PpmData, DCInputSignal)
+//    {
+//        cout << endl << "+++++DC SIGNAL TEST+++++" << endl;
+//        //Generate a DC Signal in only the first block.
+//        m_ppfInputData = new float*[m_iNumChannels];
+//        for (int c = 0; c < m_iNumChannels; c++) {
+//            m_ppfInputData[c] = new float [m_kiDataLength]();
+//            for (int j = 0; j < m_iBlockLength; j++) {
+//                m_ppfInputData[c][j] = m_fTestSineAmp;
+//            }
+//        }
+//
+//        printSignal(m_ppfInputData, m_iNumChannels, m_kiDataLength);
+//        process();
+//        printLogToAbsSignal(m_ppfVppmOutputBlocks, m_iNumChannels, m_iNumBlocks);
+//
+//
+//
+//    }
+
+    TEST_FIXTURE(PpmData, ZeroInputSignal)
     {
-        // Printing out the test signal
-        //printSignal(m_ppfInputData, m_iNumChannels, m_kiDataLength);
-
-        process();
-        printLogToAbsSignal(m_ppfVppmOutputBlocks, m_iNumChannels, m_iNumBlocks);
-
-        cout << endl;
-        for (int c = 0; c < m_iNumChannels; c++) {
-            cout  << convertLogToAbsAmp(m_pfVppmOutputTmp[c]) << " ";
-        }
-
-        // Ground Truth
-        for (int c = 0; c < m_iNumChannels; c++) {
-            m_pfVppmOutput[c] = m_fTestSineAmp;
-        }
-        cout << endl;
-        for (int c = 0; c < m_iNumChannels; c++) {
-            cout  << m_pfVppmOutput[c] << " ";
-        }
-
-
-        for (int c = 0; c < m_iNumChannels; c++) {
-                    CHECK_CLOSE(m_pfVppmOutput[c], convertLogToAbsAmp(m_pfVppmOutputTmp[c]) , 0.1);
-        }
-
-    }
-
-    TEST_FIXTURE(PpmData, UnitSineHalfwayZero)
-    {
-        //Generate Sine
+        // Zero input signal for channels
         m_ppfInputData = new float*[m_iNumChannels];
         for (int c = 0; c < m_iNumChannels; c++) {
-            m_ppfInputData[c] = new float [m_kiDataLength];
-            CSynthesis::generateSine(m_ppfInputData[c], 1000, m_fSampleRate, m_kiDataLength, m_fTestSineAmp, 0);
-        }
-        // Zero out the second half of the signal
-        int iHalfwaySampleIdx = floor(m_kiDataLength/2.0f);
-        for (int c = 0; c < m_iNumChannels; c++) {
-            for (int j = iHalfwaySampleIdx; j < m_kiDataLength; j++) {
+            m_ppfInputData[c] = new float [m_kiDataLength]();
+            for (int j = 0; j < m_iBlockLength; j++) {
                 m_ppfInputData[c][j] = 0.0f;
             }
         }
 
-        //printSignal(m_ppfInputData, m_iNumChannels, m_kiDataLength);
-
+        printSignal(m_ppfInputData, m_iNumChannels, m_kiDataLength);
         process();
         printLogToAbsSignal(m_ppfVppmOutputBlocks, m_iNumChannels, m_iNumBlocks);
+        printSignal(m_ppfVppmOutputBlocks, m_iNumChannels, m_iNumBlocks);
 
-        int iHalfwayBlockIdx = ceil(iHalfwaySampleIdx/m_iBlockLength);
-        cout << endl;
-        cout << convertLogToAbsAmp(m_ppfVppmOutputBlocks[0][iHalfwayBlockIdx]) << endl;
-        cout << convertLogToAbsAmp(m_ppfVppmOutputBlocks[0][iHalfwayBlockIdx+1]) << endl;
-        cout << convertLogToAbsAmp(m_ppfVppmOutputBlocks[0][iHalfwayBlockIdx+1]) - convertLogToAbsAmp(m_ppfVppmOutputBlocks[0][iHalfwayBlockIdx]) << endl;
     }
 
 }
