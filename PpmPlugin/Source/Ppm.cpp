@@ -47,7 +47,7 @@ Error_t CPpm::initInstance (float fSampleRateInHz, int iNumChannels)
         m_pfVppMaxOfBlock[i] = -INFINITY;
     }
 
-    // Init an array to store the prev VPPM per channel per block
+    // Init an array to store the previous VPPM per channel per block
     m_pfPrevVppm = new float[m_iNumChannels];
     for (int i=0; i < m_iNumChannels; i++) {
         m_pfPrevVppm[i] = 0.0f;
@@ -105,10 +105,9 @@ Error_t CPpm::process(float **ppfInputBuffer, float *pfVppOutputBuffer, int iNum
     {
         if (m_pfVppMaxOfBlock[c] < m_fEpsilon)
         {
-            // Ensure there are no peak values smaller than epsilon, otherwise log(0) returns an error
+            // Ensure there are no peak values in `m_pfVppMaxOfBlock` smaller than epsilon, otherwise log(0) in the next line returns an error
             m_pfVppMaxOfBlock[c] = m_fEpsilon;
         }
-
         // Convert to dB
         m_pfVppMaxOfBlock[c] = 20*log10(m_pfVppMaxOfBlock[c]);
     }

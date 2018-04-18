@@ -26,7 +26,8 @@ SUITE(Ppm)
                 m_fTestSineAmp(1.0f),
                 m_iNumChannels(3),
                 m_fEpsilon(1.0f * pow(10.0f,-5.0f)),
-                m_fAlphaAT(1.0f - exp(-2.2f / (m_fSampleRate * 0.01f))),  // alpha = 1 - [exp(-2.2 / (f_s * 0.01)), exp(-2.2 / (f_s * 1.5))];
+                // alpha = 1 - [exp(-2.2 / (f_s * 0.01)), exp(-2.2 / (f_s * 1.5))];
+                m_fAlphaAT(1.0f - exp(-2.2f / (m_fSampleRate * 0.01f))),
                 m_fAlphaRT(1.0f - exp(-2.2f / (m_fSampleRate * 1.5f)))
 
         {
@@ -85,6 +86,7 @@ SUITE(Ppm)
             {
                 int iNumFrames = std::min(iNumFramesRemaining, m_iBlockLength);
 
+                // Simulates blocks of audio being chunked from input signal and put into our process function
                 for (int c = 0; c < m_iNumChannels; c++)
                 {
                     m_ppfInputTmp[c] = &m_ppfInputData[c][m_kiDataLength - iNumFramesRemaining];
@@ -98,7 +100,6 @@ SUITE(Ppm)
 
                 iNumFramesRemaining -= iNumFrames;
                 iBlockCounter += 1;
-                // cout << iBlockCounter << " " << endl;
             }
         }
 
@@ -153,18 +154,14 @@ SUITE(Ppm)
         float       *m_pfVppmOutputTmp;
         float       *m_pfVppmOutput;
         float       **m_ppfVppmOutputBlocks;
-
-
-
     };
 
 
     TEST_FIXTURE(PpmData, ZeroInputSignal)
     {
-        // Don't really have to
+        // Description: Check if a zero input signal in all channels yields -100dB in the Vppm reading in all channels
 
         const float fZeroAmp = 0.0f;
-
         // Zero input signal for all channels
         for (int c = 0; c < m_iNumChannels; c++) {
             for (int i = 0; i < m_kiDataLength; i++) {
@@ -177,9 +174,9 @@ SUITE(Ppm)
         //printLogToAbsSignal(m_ppfVppmOutputBlocks, m_iNumChannels, m_iNumBlocks);
         //printSignal(m_ppfVppmOutputBlocks, m_iNumChannels, m_iNumBlocks);
 
-        // Check if the most recent output block was -100dB
+        // Check if the last output block was -100dB
         for (int c = 0; c < m_iNumChannels; c++) {
-            CHECK_CLOSE(m_pfVppmOutputTmp[c], convertAbsAmpToLogEpsThresh(fZeroAmp), 1e-3);
+                    CHECK_CLOSE(m_pfVppmOutputTmp[c], convertAbsAmpToLogEpsThresh(fZeroAmp), 1e-3);
         }
 
         // Check if all blocks have -100dB in all channels
@@ -188,13 +185,13 @@ SUITE(Ppm)
                         CHECK_CLOSE(m_ppfVppmOutputBlocks[c][i], convertAbsAmpToLogEpsThresh(fZeroAmp), 1e-3);
             }
         }
-
     }
 
     TEST_FIXTURE(PpmData, DCInputSignal)
     {
-        const float fDCAmp = 1.0f;
+        //Description: Check if a DC input signal of 1 in all channels yields 0dB in all Vppm channels
 
+        const float fDCAmp = 1.0f;
         // DC input signal for all channels
         for (int c = 0; c < m_iNumChannels; c++) {
             for (int i = 0; i < m_kiDataLength; i++) {
@@ -207,15 +204,37 @@ SUITE(Ppm)
         //printLogToAbsSignal(m_ppfVppmOutputBlocks, m_iNumChannels, m_iNumBlocks);
         //printSignal(m_ppfVppmOutputBlocks, m_iNumChannels, m_iNumBlocks);
 
-        // Check if the most recent output block was -100dB
+        // Check if the most recent output block was 0dB
         for (int c = 0; c < m_iNumChannels; c++) {
                     CHECK_CLOSE(m_pfVppmOutputTmp[c], convertAbsAmpToLogEpsThresh(fDCAmp), 1e-3);
         }
     }
 
-    TEST_FIXTURE(PpmData, DCHalfwayInputSignal)
+    TEST_FIXTURE(PpmData, ArbritaryDCInputSignal)
     {
-        const float fDCAmp = 0.7f;
+        //Description: Check if a DC input signal of 0.728 in all channels yields the right dB value in all Vppm channels
+
+        const float fDCAmp = 0.728f;
+        // DC input signal for all channels
+        for (int c = 0; c < m_iNumChannels; c++) {
+            for (int i = 0; i < m_kiDataLength; i++) {
+                m_ppfInputData[c][i] = fDCAmp;
+            }
+        }
+
+        process();
+
+        // Check if the most recent output block was `20*log(0.728)`
+        for (int c = 0; c < m_iNumChannels; c++) {
+                    CHECK_CLOSE(m_pfVppmOutputTmp[c], convertAbsAmpToLogEpsThresh(fDCAmp), 1e-3);
+        }
+    }
+
+    TEST_FIXTURE(PpmData, DCStepDown)
+    {                                                                //_________
+        //Description: Define a test signal as a step down function.            |_________
+
+        const float fDCAmp = 0.392f;
         const int   iDataMidPoint = floor(m_kiDataLength/2);
 
         // DC only halfway through the signal
@@ -230,15 +249,77 @@ SUITE(Ppm)
             }
         }
 
+        process();
+
+        // Determine which block this "transition" sample occured at
+        const auto iMidPointBlockIdx = static_cast<int>(ceil(m_iNumBlocks/2.0f));
+        for (int c = 0; c < m_iNumChannels; c++) {
+            // At the transition point, we expect there to be a decrease in the Vppm
+                    CHECK(m_ppfVppmOutputBlocks[c][iMidPointBlockIdx - 1] > m_ppfVppmOutputBlocks[0][iMidPointBlockIdx]);
+            // At the transition point, the number should be non zero due to the release integration time
+                    CHECK(m_ppfVppmOutputBlocks[c][iMidPointBlockIdx] > convertAbsAmpToLogEpsThresh(0));
+        }
+    }
+
+    TEST_FIXTURE(PpmData, DCStepUp)
+    {                                                                            //          _________
+        //Description: Define a test signal as a step function but stepping up     _________|
+
+        const float fDCAmp = 0.9172f;
+        const int   iDataMidPoint = floor(m_kiDataLength/2);
+
+        // DC only halfway through the signal
+        for (int c = 0; c < m_iNumChannels; c++) {
+            for (int i = 0; i < m_kiDataLength; i++) {
+                m_ppfInputData[c][i] = fDCAmp;
+            }
+        }
+        for (int c = 0; c < m_iNumChannels; c++) {
+            for (int i = 0; i < iDataMidPoint; i++) {
+                m_ppfInputData[c][i] = 0.0f;
+            }
+        }
+
+        process();
+
+        // Determine which block this "transition" sample occured at
+        const auto iMidPointBlockIdx = static_cast<int>(ceil(m_iNumBlocks/2.0f));
+
+        for (int c = 0; c < m_iNumChannels; c++) {
+            // At the transition point, we expect there to be an increase in the Vppm
+                    CHECK(m_ppfVppmOutputBlocks[c][iMidPointBlockIdx - 1] < m_ppfVppmOutputBlocks[0][iMidPointBlockIdx]);
+            // At the transition point, the number should be non zero but less than whatever the `fDCAmp` was configured to be
+                    CHECK(m_ppfVppmOutputBlocks[c][iMidPointBlockIdx] < convertAbsAmpToLogEpsThresh(fDCAmp));
+        }
+    }
+
+    TEST_FIXTURE(PpmData, ArbritaryAmpSine)
+    {
+        // Description: Test Vppm values with a sine signal set an at arbritary max amplitude
+        
+        const float fSineAmp = 0.3892f;
+        // Generate sine
+        for (int i = 0; i < m_iNumChannels; i++) {
+            CSynthesis::generateSine(m_ppfInputData[i], 100, m_fSampleRate, m_kiDataLength, fSineAmp, 0);
+        }
+
         //printSignal(m_ppfInputData, m_iNumChannels, m_kiDataLength);
         process();
         //printLogToAbsSignal(m_ppfVppmOutputBlocks, m_iNumChannels, m_iNumBlocks);
         //printSignal(m_ppfVppmOutputBlocks, m_iNumChannels, m_iNumBlocks);
 
-        const int iMidPointBlockIdx = static_cast<int>(ceil(m_iNumBlocks/2.0f));
+        // On the very first reading, we expect the Vppm reading to be greater than 0, but less than the specified Sine amplitude
+        for (int c = 0; c < m_iNumChannels; c++) {
+                    CHECK(m_pfVppmOutputTmp[c] < convertAbsAmpToLogEpsThresh(fSineAmp));
+                    CHECK(m_pfVppmOutputTmp[c] > convertAbsAmpToLogEpsThresh(0.0f));
+        }
 
-        // At the transition point, we expect there to be a decrease in the Vppm
-        CHECK(m_ppfVppmOutputBlocks[0][iMidPointBlockIdx - 1] > m_ppfVppmOutputBlocks[0][iMidPointBlockIdx]);
+        // On the very last reading, we expect the Vppm reading to be close to original `fSineAmp` but not exactly due to blocking and oscillations etc.
+        for (int c = 0; c < m_iNumChannels; c++) {
+                    CHECK_CLOSE(convertLogToAbsAmp(m_pfVppmOutputTmp[c]), fSineAmp, 0.05);  // convert back to absolute scale
+                    CHECK(m_pfVppmOutputTmp[c] > convertAbsAmpToLogEpsThresh(0.0f));
+        }
+
 
     }
 
