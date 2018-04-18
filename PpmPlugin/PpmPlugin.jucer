@@ -1,16 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <JUCERPROJECT name="PpmPlugin" projectType="audioplug" buildStandalone="1"
-              jucerVersion="5.2.1" headerPath="../../../inc&#10;../../../src/inc&#10;../../../src/Ppm">
+              jucerVersion="5.2.1">
   <MAINGROUP id="ctG7xg" name="PpmPlugin">
     <GROUP id="{79B9177D-1EB3-417A-3AC3-D2D79D2B470A}" name="Source">
+      <FILE id="mmkmEZ" name="ErrorDef.h" compile="0" resource="0" file="Source/ErrorDef.h"/>
+      <FILE id="oA6Y4b" name="Ppm.cpp" compile="1" resource="0" file="Source/Ppm.cpp"/>
+      <FILE id="KzbvSJ" name="Ppm.h" compile="0" resource="0" file="Source/Ppm.h"/>
+      <FILE id="xyl60D" name="MeterComponent.cpp" compile="1" resource="0"
+            file="Source/MeterComponent.cpp"/>
+      <FILE id="GDNdEX" name="MeterComponent.h" compile="1" resource="0"
+            file="Source/MeterComponent.h"/>
       <FILE id="GDowNN" name="PluginProcessor.cpp" compile="1" resource="0"
             file="Source/PluginProcessor.cpp"/>
-      <FILE id="wibOwF" name="PluginProcessor.h" compile="0" resource="0"
+      <FILE id="wibOwF" name="PluginProcessor.h" compile="1" resource="0"
             file="Source/PluginProcessor.h"/>
       <FILE id="hRx5Wb" name="PluginEditor.cpp" compile="1" resource="0"
             file="Source/PluginEditor.cpp"/>
-      <FILE id="ffdibF" name="PluginEditor.h" compile="0" resource="0" file="Source/PluginEditor.h"/>
+      <FILE id="ffdibF" name="PluginEditor.h" compile="1" resource="0" file="Source/PluginEditor.h"/>
     </GROUP>
   </MAINGROUP>
   <EXPORTFORMATS>

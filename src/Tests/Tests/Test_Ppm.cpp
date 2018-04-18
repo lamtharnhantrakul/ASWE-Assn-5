@@ -193,7 +193,7 @@ SUITE(Ppm)
 
     TEST_FIXTURE(PpmData, DCInputSignal)
     {
-        const float fDCAmp = 0.7f;
+        const float fDCAmp = 1.0f;
 
         // DC input signal for all channels
         for (int c = 0; c < m_iNumChannels; c++) {

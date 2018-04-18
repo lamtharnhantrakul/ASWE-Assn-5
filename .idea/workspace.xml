@@ -22,7 +22,17 @@
   <component name="ChangeListManager">
     <list default="true" id="c4dc5bad-adfb-4554-97b7-de256c3c1bed" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/PpmPlugin/Builds/MacOSX/Info-AU.plist" afterPath="$PROJECT_DIR$/PpmPlugin/Builds/MacOSX/Info-AU.plist" />
+      <change beforePath="$PROJECT_DIR$/PpmPlugin/Builds/MacOSX/PpmPlugin.xcodeproj/project.pbxproj" afterPath="$PROJECT_DIR$/PpmPlugin/Builds/MacOSX/PpmPlugin.xcodeproj/project.pbxproj" />
+      <change beforePath="$PROJECT_DIR$/PpmPlugin/JuceLibraryCode/AppConfig.h" afterPath="$PROJECT_DIR$/PpmPlugin/JuceLibraryCode/AppConfig.h" />
+      <change beforePath="$PROJECT_DIR$/PpmPlugin/PpmPlugin.jucer" afterPath="$PROJECT_DIR$/PpmPlugin/PpmPlugin.jucer" />
+      <change beforePath="$PROJECT_DIR$/PpmPlugin/Source/PluginEditor.cpp" afterPath="$PROJECT_DIR$/PpmPlugin/Source/PluginEditor.cpp" />
+      <change beforePath="$PROJECT_DIR$/PpmPlugin/Source/PluginEditor.h" afterPath="$PROJECT_DIR$/PpmPlugin/Source/PluginEditor.h" />
+      <change beforePath="$PROJECT_DIR$/PpmPlugin/Source/PluginProcessor.cpp" afterPath="$PROJECT_DIR$/PpmPlugin/Source/PluginProcessor.cpp" />
+      <change beforePath="$PROJECT_DIR$/PpmPlugin/Source/PluginProcessor.h" afterPath="$PROJECT_DIR$/PpmPlugin/Source/PluginProcessor.h" />
       <change beforePath="$PROJECT_DIR$/bin/debug/TestExec" afterPath="$PROJECT_DIR$/bin/debug/TestExec" />
+      <change beforePath="$PROJECT_DIR$/inc/ErrorDef.h" afterPath="$PROJECT_DIR$/inc/ErrorDef.h" />
+      <change beforePath="$PROJECT_DIR$/src/Ppm/Ppm.cpp" afterPath="$PROJECT_DIR$/src/Ppm/Ppm.cpp" />
       <change beforePath="$PROJECT_DIR$/src/Tests/Tests/Test_Ppm.cpp" afterPath="$PROJECT_DIR$/src/Tests/Tests/Test_Ppm.cpp" />
     </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
@@ -37,15 +47,13 @@
     <window id="1">
       <content type="file-editors">
         <state>
-          <leaf>
+          <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
             <file leaf-file-name="Ppm.cpp" pinned="false" current-in-tab="true">
               <entry file="file://$PROJECT_DIR$/src/Ppm/Ppm.cpp">
                 <provider selected="true" editor-type-id="text-editor">
-                  <state relative-caret-position="322">
-                    <caret line="89" column="63" lean-forward="false" selection-start-line="89" selection-start-column="16" selection-end-line="89" selection-end-column="63" />
-                    <folding>
-                      <element signature="e#0#21#0" expanded="true" />
-                    </folding>
+                  <state relative-caret-position="555">
+                    <caret line="41" column="80" lean-forward="false" selection-start-line="41" selection-start-column="4" selection-end-line="41" selection-end-column="80" />
+                    <folding />
                   </state>
                 </provider>
               </entry>
@@ -61,8 +69,8 @@
       <file leaf-file-name="Ppm.h" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/inc/Ppm.h">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="420">
-              <caret line="28" column="29" lean-forward="false" selection-start-line="28" selection-start-column="29" selection-end-line="28" selection-end-column="29" />
+            <state relative-caret-position="285">
+              <caret line="19" column="0" lean-forward="false" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
               <folding>
                 <element signature="e#47#68#0" expanded="true" />
               </folding>
@@ -73,8 +81,8 @@
       <file leaf-file-name="Test_Ppm.cpp" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Tests/Tests/Test_Ppm.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="231">
-              <caret line="203" column="0" lean-forward="true" selection-start-line="203" selection-start-column="0" selection-end-line="203" selection-end-column="0" />
+            <state relative-caret-position="573">
+              <caret line="207" column="10" lean-forward="false" selection-start-line="207" selection-start-column="10" selection-end-line="207" selection-end-column="10" />
               <folding>
                 <element signature="e#47#65#0" expanded="true" />
               </folding>
@@ -82,10 +90,20 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="Vibrato.cpp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Vibrato/Vibrato.cpp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="315">
+              <caret line="21" column="18" lean-forward="false" selection-start-line="21" selection-start-column="4" selection-end-line="21" selection-end-column="18" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="Test_CombFilter.cpp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Tests/Tests/Test_CombFilter.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1171">
+            <state relative-caret-position="1785">
               <caret line="119" column="88" lean-forward="false" selection-start-line="119" selection-start-column="84" selection-end-line="119" selection-end-column="88" />
               <folding />
             </state>
@@ -107,7 +125,7 @@
       <file leaf-file-name="Test.cpp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Tests/TestExec/Test.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-101">
+            <state relative-caret-position="480">
               <caret line="32" column="19" lean-forward="false" selection-start-line="32" selection-start-column="19" selection-end-line="32" selection-end-column="19" />
               <folding>
                 <element signature="e#33#56#0" expanded="true" />
@@ -148,10 +166,10 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-519" />
-    <option name="width" value="1920" />
-    <option name="height" value="900" />
+  <component name="ProjectFrameBounds">
+    <option name="x" value="70" />
+    <option name="width" value="1916" />
+    <option name="height" value="1080" />
   </component>
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1">
@@ -174,6 +192,11 @@
             <path>
               <item name="MUSI6106" type="dad4c3:CidrFilesViewHelper$MyProjectTreeStructure$1" />
               <item name="ASWE-Assn-5" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="MUSI6106" type="dad4c3:CidrFilesViewHelper$MyProjectTreeStructure$1" />
+              <item name="ASWE-Assn-5" type="462c0819:PsiDirectoryNode" />
+              <item name="inc" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="MUSI6106" type="dad4c3:CidrFilesViewHelper$MyProjectTreeStructure$1" />
@@ -201,32 +224,7 @@
               <item name="MUSI6106" type="dad4c3:CidrFilesViewHelper$MyProjectTreeStructure$1" />
               <item name="ASWE-Assn-5" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="inc" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="MUSI6106" type="dad4c3:CidrFilesViewHelper$MyProjectTreeStructure$1" />
-              <item name="ASWE-Assn-5" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="MUSI6106Exec" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="MUSI6106" type="dad4c3:CidrFilesViewHelper$MyProjectTreeStructure$1" />
-              <item name="ASWE-Assn-5" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="Ppm" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="MUSI6106" type="dad4c3:CidrFilesViewHelper$MyProjectTreeStructure$1" />
-              <item name="ASWE-Assn-5" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="Tests" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="MUSI6106" type="dad4c3:CidrFilesViewHelper$MyProjectTreeStructure$1" />
-              <item name="ASWE-Assn-5" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="Tests" type="462c0819:PsiDirectoryNode" />
-              <item name="Tests" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="MUSI6106" type="dad4c3:CidrFilesViewHelper$MyProjectTreeStructure$1" />
@@ -322,26 +320,32 @@
       <workItem from="1523730676193" duration="5835000" />
       <workItem from="1523736577412" duration="2371000" />
       <workItem from="1523988813837" duration="10045000" />
+      <workItem from="1524000656285" duration="47000" />
+      <workItem from="1524001985218" duration="259000" />
+      <workItem from="1524017653417" duration="38000" />
+      <workItem from="1524018721623" duration="152000" />
+      <workItem from="1524024306676" duration="77000" />
+      <workItem from="1524025841490" duration="13000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="26536000" />
+    <option name="totallyTimeSpent" value="27122000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="4" y="22" width="1916" height="1058" extended-state="6" />
+    <frame x="70" y="0" width="1916" height="1080" extended-state="0" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.15250659" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.15250659" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3281412" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32791877" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="CMake" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.22335026" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.22429906" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32994923" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -366,7 +370,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="315">
           <caret line="21" column="18" lean-forward="false" selection-start-line="21" selection-start-column="4" selection-end-line="21" selection-end-column="18" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -509,9 +512,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="660">
           <caret line="53" column="13" lean-forward="false" selection-start-line="53" selection-start-column="13" selection-end-line="53" selection-end-column="13" />
-          <folding>
-            <element signature="e#47#65#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -563,7 +563,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="270">
           <caret line="18" column="76" lean-forward="false" selection-start-line="18" selection-start-column="53" selection-end-line="18" selection-end-column="76" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -571,7 +570,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -579,9 +577,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <marker date="1523634140000" expanded="true" signature="47:8702" ph="..." />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -589,7 +584,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="510">
           <caret line="34" column="33" lean-forward="false" selection-start-line="34" selection-start-column="19" selection-end-line="34" selection-end-column="33" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -597,7 +591,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="315">
           <caret line="21" column="18" lean-forward="false" selection-start-line="21" selection-start-column="4" selection-end-line="21" selection-end-column="18" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -605,9 +598,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="691">
           <caret line="101" column="61" lean-forward="false" selection-start-line="101" selection-start-column="31" selection-end-line="101" selection-end-column="61" />
-          <folding>
-            <element signature="e#0#21#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -716,9 +707,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-2074">
           <caret line="3" column="0" lean-forward="true" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
-          <folding>
-            <marker date="1523634140000" expanded="true" signature="47:8702" ph="..." />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -726,7 +714,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -742,7 +729,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="270">
           <caret line="18" column="76" lean-forward="false" selection-start-line="18" selection-start-column="53" selection-end-line="18" selection-end-column="76" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -750,21 +736,12 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="510">
           <caret line="34" column="33" lean-forward="false" selection-start-line="34" selection-start-column="19" selection-end-line="34" selection-end-column="33" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Vibrato/Vibrato.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="21" column="18" lean-forward="false" selection-start-line="21" selection-start-column="4" selection-end-line="21" selection-end-column="18" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Tests/TestExec/Test.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-101">
+        <state relative-caret-position="480">
           <caret line="32" column="19" lean-forward="false" selection-start-line="32" selection-start-column="19" selection-end-line="32" selection-end-column="19" />
           <folding>
             <element signature="e#33#56#0" expanded="true" />
@@ -777,7 +754,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2318">
           <caret line="165" column="5" lean-forward="true" selection-start-line="165" selection-start-column="5" selection-end-line="165" selection-end-column="5" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -791,38 +767,44 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/inc/Ppm.h">
+    <entry file="file://$PROJECT_DIR$/src/Tests/Tests/Test_CombFilter.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="28" column="29" lean-forward="false" selection-start-line="28" selection-start-column="29" selection-end-line="28" selection-end-column="29" />
-          <folding>
-            <element signature="e#47#68#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="1785">
+          <caret line="119" column="88" lean-forward="false" selection-start-line="119" selection-start-column="84" selection-end-line="119" selection-end-column="88" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Tests/Tests/Test_CombFilter.cpp">
+    <entry file="file://$PROJECT_DIR$/src/Vibrato/Vibrato.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1171">
-          <caret line="119" column="88" lean-forward="false" selection-start-line="119" selection-start-column="84" selection-end-line="119" selection-end-column="88" />
+        <state relative-caret-position="315">
+          <caret line="21" column="18" lean-forward="false" selection-start-line="21" selection-start-column="4" selection-end-line="21" selection-end-column="18" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Ppm/Ppm.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="322">
-          <caret line="89" column="63" lean-forward="false" selection-start-line="89" selection-start-column="16" selection-end-line="89" selection-end-column="63" />
+        <state relative-caret-position="555">
+          <caret line="41" column="80" lean-forward="false" selection-start-line="41" selection-start-column="4" selection-end-line="41" selection-end-column="80" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/inc/Ppm.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="19" column="0" lean-forward="false" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
           <folding>
-            <element signature="e#0#21#0" expanded="true" />
+            <element signature="e#47#68#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Tests/Tests/Test_Ppm.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="231">
-          <caret line="203" column="0" lean-forward="true" selection-start-line="203" selection-start-column="0" selection-end-line="203" selection-end-column="0" />
+        <state relative-caret-position="573">
+          <caret line="207" column="10" lean-forward="false" selection-start-line="207" selection-start-column="10" selection-end-line="207" selection-end-column="10" />
           <folding>
             <element signature="e#47#65#0" expanded="true" />
           </folding>

@@ -11,7 +11,6 @@
 #include "PluginProcessor.h"
 #include "PluginEditor.h"
 
-
 //==============================================================================
 PpmPluginAudioProcessor::PpmPluginAudioProcessor()
 #ifndef JucePlugin_PreferredChannelConfigurations
@@ -25,10 +24,12 @@ PpmPluginAudioProcessor::PpmPluginAudioProcessor()
                        )
 #endif
 {
+    CPpm::createInstance(m_pCPpm);
 }
 
 PpmPluginAudioProcessor::~PpmPluginAudioProcessor()
 {
+    CPpm::destroyInstance(m_pCPpm);
 }
 
 //==============================================================================
@@ -98,6 +99,15 @@ void PpmPluginAudioProcessor::prepareToPlay (double sampleRate, int samplesPerBl
 {
     // Use this method as the place to do any pre-playback
     // initialisation that you need..
+    
+    // Initialize CPpm object
+    m_pCPpm->initInstance(sampleRate, getTotalNumInputChannels());
+    
+    // Create an array to store the output Vppm per channel that is computed everytime we get a block
+    m_iTotalNumInputChannels = getTotalNumInputChannels();
+    m_pfOutputVppm = new float [m_iTotalNumInputChannels];
+    
+    
 }
 
 void PpmPluginAudioProcessor::releaseResources()
@@ -145,18 +155,20 @@ void PpmPluginAudioProcessor::processBlock (AudioBuffer<float>& buffer, MidiBuff
     for (auto i = totalNumInputChannels; i < totalNumOutputChannels; ++i)
         buffer.clear (i, 0, buffer.getNumSamples());
 
-    // This is the place where you'd normally do the guts of your plugin's
-    // audio processing...
-    // Make sure to reset the state if your inner loop is processing
-    // the samples and the outer loop is handling the channels.
-    // Alternatively, you can process the samples with the channels
-    // interleaved by keeping the same state.
-    for (int channel = 0; channel < totalNumInputChannels; ++channel)
-    {
-        auto* channelData = buffer.getWritePointer (channel);
+    
+    float **writePointers = buffer.getArrayOfWritePointers();
+    m_pCPpm->process(writePointers, m_pfOutputVppm, buffer.getNumSamples());
+    
+}
 
-        // ..do something to the data...
+float PpmPluginAudioProcessor::getVppm()
+{
+    // Output mean of Vppm across channels
+    float sum = 0.0f;
+    for (int c = 0; c < m_iTotalNumInputChannels; c++) {
+        sum += m_pfOutputVppm[c];
     }
+    return sum / static_cast<float>(m_iTotalNumInputChannels);
 }
 
 //==============================================================================
