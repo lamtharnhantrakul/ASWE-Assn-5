@@ -26,7 +26,7 @@ SUITE(Ppm)
                 m_fTestSineAmp(1.0f),
                 m_iNumChannels(3),
                 m_fEpsilon(1.0f * pow(10.0f,-5.0f)),
-                // alpha = 1 - [exp(-2.2 / (f_s * 0.01)), exp(-2.2 / (f_s * 1.5))];
+                //MATLAB // alpha = 1 - [exp(-2.2 / (f_s * 0.01)), exp(-2.2 / (f_s * 1.5))];
                 m_fAlphaAT(1.0f - exp(-2.2f / (m_fSampleRate * 0.01f))),
                 m_fAlphaRT(1.0f - exp(-2.2f / (m_fSampleRate * 1.5f)))
 
@@ -296,7 +296,7 @@ SUITE(Ppm)
     TEST_FIXTURE(PpmData, ArbritaryAmpSine)
     {
         // Description: Test Vppm values with a sine signal set an at arbritary max amplitude
-        
+
         const float fSineAmp = 0.3892f;
         // Generate sine
         for (int i = 0; i < m_iNumChannels; i++) {

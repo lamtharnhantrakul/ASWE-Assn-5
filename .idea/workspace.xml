@@ -21,8 +21,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c4dc5bad-adfb-4554-97b7-de256c3c1bed" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/PpmPlugin/Source/Ppm.cpp" afterPath="$PROJECT_DIR$/PpmPlugin/Source/Ppm.cpp" />
-      <change beforePath="$PROJECT_DIR$/bin/debug/TestExec" afterPath="$PROJECT_DIR$/bin/debug/TestExec" />
       <change beforePath="$PROJECT_DIR$/src/Tests/Tests/Test_Ppm.cpp" afterPath="$PROJECT_DIR$/src/Tests/Tests/Test_Ppm.cpp" />
     </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
@@ -83,8 +81,8 @@
       <file leaf-file-name="Test_Ppm.cpp" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Tests/Tests/Test_Ppm.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="69">
-              <caret line="298" column="8" lean-forward="false" selection-start-line="298" selection-start-column="8" selection-end-line="298" selection-end-column="8" />
+            <state relative-caret-position="444">
+              <caret line="323" column="5" lean-forward="true" selection-start-line="323" selection-start-column="5" selection-end-line="323" selection-end-column="5" />
               <folding>
                 <element signature="e#47#65#0" expanded="true" />
               </folding>
@@ -329,12 +327,12 @@
       <workItem from="1524018721623" duration="152000" />
       <workItem from="1524024306676" duration="77000" />
       <workItem from="1524025841490" duration="13000" />
-      <workItem from="1524063798497" duration="2242000" />
+      <workItem from="1524063798497" duration="2344000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="29364000" />
+    <option name="totallyTimeSpent" value="29466000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="4" y="0" width="2556" height="1080" extended-state="6" />
@@ -345,7 +343,7 @@
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32791877" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="CMake" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3715736" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3715736" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32994923" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -811,8 +809,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Tests/Tests/Test_Ppm.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="69">
-          <caret line="298" column="8" lean-forward="false" selection-start-line="298" selection-start-column="8" selection-end-line="298" selection-end-column="8" />
+        <state relative-caret-position="444">
+          <caret line="323" column="5" lean-forward="true" selection-start-line="323" selection-start-column="5" selection-end-line="323" selection-end-column="5" />
           <folding>
             <element signature="e#47#65#0" expanded="true" />
           </folding>
